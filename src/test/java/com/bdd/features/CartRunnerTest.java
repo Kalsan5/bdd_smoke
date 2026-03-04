@@ -7,7 +7,8 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features="src/test/resources/cart/cart.feature",glue={"com.steps"},
-tags="@smoke")
+tags="@smoke",
+plugin= {"pretty","html:target/cucumber-report.html"})
 public class CartRunnerTest {
 	
 	
